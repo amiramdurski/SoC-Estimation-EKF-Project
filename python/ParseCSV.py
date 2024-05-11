@@ -11,7 +11,7 @@ def csv_measurements_to_numpy_array(file_path):
     return measurements
 
 
-def creating_physical_model(input_path, output_path, r_0, Q, s, p):
+def creating_linear_model(input_path, output_path, r0, q, s, p):
     # Load the CSV file
     data = pd.read_csv(input_path)
 
@@ -56,21 +56,21 @@ def creating_physical_model(input_path, output_path, r_0, Q, s, p):
     plt.text(0.5, 0.9, equation_text, fontsize=12, transform=plt.gca().transAxes)
 
     # Add title, labels, and legend
-    plt.title('Voltage as function of SoC')
+    plt.title('Voltage as function of SoC - Linear Model')
     plt.xlabel('SOC')
     plt.ylabel('Voltage Measurment [V]')
     plt.legend()
     plt.show()
 
     # Calculation of internal resistance
-    R_0 = (r_0 * s) / p
+    R_0 = (r0 * s) / p
 
     # Calculation of delta t average
     differences = data['Time'].diff()
     delta_t = differences.mean()
 
     A = 1
-    B = (delta_t * 10**(-6)) / (3600 * Q)
+    B = (delta_t * 10**(-6)) / (3600 * q)
     H = m
     D = -R_0
     delta_V = c
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     input_path = 'C:\python\FinalProject\output.csv'  # Path to your input CSV file
     output_path = 'C:\python\FinalProject\gen_output.csv'  # Path to save the modified CSV file
     #csv_measurements_to_numpy_array(input_path)
-    #creating_physical_model(input_path = input_path, output_path = output_path, r_0 = 50e-3, Q = 78, s = 6, p = 4)
+    #creating_linear_model(input_path = input_path, output_path = output_path, r0 = 50e-3, q = 78, s = 6, p = 4)
