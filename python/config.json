@@ -1,0 +1,77 @@
+{
+    "paths": {
+        "model": [
+            "C:\\python\\FinalProject\\model_measurements\\model_tesla_3.csv"
+        ],
+        "input_files": [
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_HWCUST1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_HWCUST1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_HWCUST1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED2.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED3.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED4.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED5.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED6.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED7.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_10C_REORDERED8.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED2.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED3.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED4.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED5.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED6.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED7.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_25C_REORDERED8.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED1.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED2.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED3.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED4.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED5.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED6.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED7.csv",
+            "C:\\python\\FinalProject\\estimation_measurements\\tesla_40C_REORDERED8.csv"
+        ],
+        "output_directory":
+            "C:\\python\\FinalProject\\outputs"
+
+    },
+    "titles": {
+        "voltage": "Ecell_V",
+        "current": "I_mA",
+        "q_counting": "QDischarge_mA_h",
+        "time": "time_s",
+        "temperature": "Temperature__C",
+        "SOC": "soc"
+    },
+    "rint_model_params": {
+        "r0": 0.0615,
+        "q": 4500,
+        "s": 1,
+        "p": 1,
+        "soc_degree": [1, 6],
+        "temperature_degree": 0,
+        "adjusted_soc": true,
+        "temperature_flag": false,
+        "initial_state": 0.96,
+        "P": 0.1,
+        "Q": 0.000002,
+        "R": 0.1
+    },
+    "thevenin_model_params": {
+        "r0": 0.0615,
+        "r1": 0.00051,
+        "c1": 0.0197584,
+        "q": 4500,
+        "s": 1,
+        "p": 1,
+        "soc_degree": [1, 6],
+        "temperature_degree": [0, 3],
+        "adjusted_soc": true,
+        "temperature_flag": [false, true],
+        "initial_state": [0.001, 0.96],
+        "P": [0.1, 0.00051],
+        "Q": [0.01, 0.000002],
+        "R": 0.1
+    }
+}
